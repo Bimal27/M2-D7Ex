@@ -28,13 +28,29 @@
         }
 
         /*EX3) Write a selector to target the "continue reading..." inside the jumbotron*/
+
+
         /*EX4) Write a selector to target the first blogpost*/
+
+        #first-blog:first-of-type {
+            background-color: blue;
+        }
+
         /*EX5) Write a selector to target the "even" links in the navbar*/
+        nav>a:nth-of-type(2n) {
+            background-color: red;
+        }
+
         /*EX6) Write a selector to target the last blog post*/
+
         /*EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )*/
         /*EX8) Write a selector to target the second post author*/
         /*EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly*/
         /*EX10) Write a selector to target the footer*/
+        .blog-footer {
+            background-color: cyan;
+        }
+
         */
     </style>
     <meta charset="utf-8" />
@@ -155,7 +171,7 @@
             <div class="col-md-6">
                 <div
                     class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
+                    <div class="col p-4 d-flex  continue flex-column position-static">
                         <strong class="d-inline-block mb-2 text-success">Design</strong>
                         <h3 class="mb-0">Post title</h3>
                         <div class="mb-1 text-muted">Nov 11</div>
@@ -184,7 +200,7 @@
             <div class="col-md-8 blog-main">
                 <h3 class="pb-4 mb-4 font-italic border-bottom">From the Firehose</h3>
 
-                <div class="blog-post">
+                <div class="blog-post" id="first-blog">
                     <h2 class="blog-post-title">Sample blog post</h2>
                     <p class="blog-post-meta">
                         January 1, 2014 by <a href="#">Mark</a>
