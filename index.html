@@ -55,8 +55,16 @@
         }
 
         /*EX8) Write a selector to target the second post author*/
+        main .blog-main .blog-post:nth-child(3)>h2+p>a {
+            background-color: chartreuse !important;
+        }
+
 
         /*EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly*/
+        p:last-of-type>a {
+            background-color: rgb(221, 67, 11) !important;
+        }
+
         /*EX10) Write a selector to target the footer*/
         .blog-footer {
             background-color: cyan;
