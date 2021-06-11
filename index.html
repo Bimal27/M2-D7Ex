@@ -436,17 +436,71 @@
     <script>
         /*
           JS Exercises
-          EX11) Write a function to add a new link into the navbar
-          EX12) Write a function to change the color of the main title
-          EX13) Write a function to change the background of the jumbotron
-          EX14) Write a function to remove all the links under "Elsewhere"
-          EX15) Write a function to change the column size for heading in jumbotron
-          EX16) Write a function to remove the "Search" magnifying glass icon
-          EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-          EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-          EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-          EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
-      */
+          EX11) Write a function to add a new link into the navbar*/
+        let addLink = function (content) {
+            let parent = document.querySelector(".nav")
+
+            let a = `<a class="p-2 text-muted" href="#">${content}</a>`
+            parent.innerHTML += a;
+        }
+        addLink("New Link")
+
+
+        /* EX12) Write a function to change the color of the main title*/
+        const changeTitle = function () {
+            const title = document.querySelector(".jumbotron h1")
+            title.style.color = "pink"
+        }
+        changeTitle()
+
+        /*EX13) Write a function to change the background of the jumbotron*/
+
+        const changeBackground = function () {
+            const jumbotron = document.querySelector(".jumbotron")
+            jumbotron.classList.remove("bg-dark")
+            jumbotron.classList.remove("text-white")
+
+        }
+        changeBackground()
+
+
+        /*EX14) Write a function to remove all the links under "Elsewhere"*/
+
+        const removeOl = function () {
+            const ol = document.querySelector(".blog-sidebar > div:last-of-type ol")
+            ol.innerHTML = ""
+
+        }
+        removeOl()
+        /* EX15) Write a function to change the column size for heading in jumbotron*/
+        let changeColSize = function () {
+            const cols = document.querySelectorAll(".jumbotron + div .col-md-6")
+            cols.forEach((col) => {
+                col.className = "col-md-4"
+            })
+        }
+        changeColSize()
+        /* EX16) Write a function to remove the "Search" magnifying glass icon*/
+        const removeSearch = function () {
+            const div = document.querySelector(
+                ".blog-header .row div:last-of-type"
+            );
+            console.log(div);
+            div.children[0].remove();
+        };
+        removeSearch();
+        /* EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post*/
+
+
+        /* EX18) Write a function and attach it to the "Newer" button, to add new Blog Post(just div and title)*/
+
+        /*EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post*/
+
+
+        /*EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name*/
+
+
+
     </script>
 </body>
 
